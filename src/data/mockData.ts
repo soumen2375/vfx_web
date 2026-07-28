@@ -686,14 +686,14 @@ export const FAQ_DATA: FAQItem[] = [
 export const LOCATIONS_DATA: StudioLocation[] = [
   {
     id: 'loc-india',
-    city: 'Mumbai & Pan-India Studio Hubs',
+    city: 'Moyna & Purba Medinipur Main Studio',
     country: 'India',
-    address: 'Right Time FX Studio, Main Production Hub, Mumbai, Maharashtra 400063, India',
+    address: 'Mondal Building 4th Floor, Dakbanglow-Moyna Rd, Sudampur, Balaipanda Bazar, Moyna, Purba Medinipur, West Bengal, 721644, India',
     phone: '+91 7319574918',
     email: 'soumadipdinda18@gmail.com',
     hours: '24/7 Production & Client Operations',
     isHeadquarters: true,
-    mapCoordinates: { lat: 19.0760, lng: 72.8777 },
+    mapCoordinates: { lat: 22.2570, lng: 87.7788 },
     image: 'https://images.unsplash.com/photo-1570168007204-dfb528c6958f?auto=format&fit=crop&w=600&q=80'
   },
   {

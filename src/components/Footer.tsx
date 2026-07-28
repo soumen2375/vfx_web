@@ -44,11 +44,11 @@ export const Footer: React.FC<FooterProps> = ({ onNavigate, onOpenReel }) => {
       <div className="absolute bottom-0 right-1/4 w-96 h-96 bg-rose-600/10 rounded-full blur-[140px] pointer-events-none" />
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 space-y-12">
-        {/* TOP MAIN GRID (6 Columns) */}
+        {/* TOP MAIN GRID (3 Columns) */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-12 gap-8 pb-10 border-b border-white/10">
           
-          {/* Column 1: Brand & Contact (4 cols on lg) */}
-          <div className="lg:col-span-4 space-y-4">
+          {/* Column 1: Brand & Contact (5 cols on lg) */}
+          <div className="lg:col-span-5 space-y-4">
             <button
               onClick={() => onNavigate('home')}
               className="text-left focus:outline-none"
@@ -64,9 +64,9 @@ export const Footer: React.FC<FooterProps> = ({ onNavigate, onOpenReel }) => {
             <div className="w-12 h-0.5 bg-red-600 my-4 rounded-full" />
 
             <div className="space-y-2.5 text-xs">
-              <div className="flex items-center space-x-3 text-gray-300">
-                <MapPin className="w-4 h-4 text-red-500 shrink-0" />
-                <span>Main Production Studio Hub, India</span>
+              <div className="flex items-start space-x-3 text-gray-300">
+                <MapPin className="w-4 h-4 text-red-500 shrink-0 mt-0.5" />
+                <span className="leading-relaxed">Mondal Building 4th Floor, Dakbanglow-Moyna Rd, Sudampur, Balaipanda Bazar, Moyna, Purba Medinipur, West Bengal, 721644, India</span>
               </div>
               <div className="flex items-center space-x-3 text-gray-300">
                 <Phone className="w-4 h-4 text-red-500 shrink-0" />
@@ -119,8 +119,8 @@ export const Footer: React.FC<FooterProps> = ({ onNavigate, onOpenReel }) => {
             </div>
           </div>
 
-          {/* Column 2: STUDIO (2 cols on lg) */}
-          <div className="lg:col-span-2 space-y-3">
+          {/* Column 2: STUDIO (3 cols on lg) */}
+          <div className="lg:col-span-3 space-y-3">
             <h4 className="font-heading font-bold text-white text-xs tracking-widest uppercase mb-4">
               STUDIO
             </h4>
@@ -143,8 +143,8 @@ export const Footer: React.FC<FooterProps> = ({ onNavigate, onOpenReel }) => {
             </ul>
           </div>
 
-          {/* Column 3: SERVICES (3 cols on lg) */}
-          <div className="lg:col-span-3 space-y-3">
+          {/* Column 3: SERVICES (4 cols on lg) */}
+          <div className="lg:col-span-4 space-y-3">
             <h4 className="font-heading font-bold text-white text-xs tracking-widest uppercase mb-4">
               SERVICES
             </h4>
@@ -189,68 +189,6 @@ export const Footer: React.FC<FooterProps> = ({ onNavigate, onOpenReel }) => {
                 </button>
               </li>
             </ul>
-          </div>
-
-          {/* Column 5 & 6: STAY UPDATED & REQUEST A QUOTE (2 cols on lg) */}
-          <div className="lg:col-span-2 space-y-4">
-            <h4 className="font-heading font-bold text-white text-xs tracking-widest uppercase">
-              STAY UPDATED
-            </h4>
-            <p className="text-xs text-gray-400 leading-relaxed">
-              Subscribe to our newsletter for latest updates, showcases and industry insights.
-            </p>
-
-            {subscribed ? (
-              <div className="p-3 bg-red-950/60 border border-red-500/40 rounded-xl text-xs text-red-300 flex items-center space-x-2">
-                <CheckCircle className="w-4 h-4 text-red-400 shrink-0" />
-                <span>Subscribed! Welcome to Right Time FX Studio.</span>
-              </div>
-            ) : (
-              <form onSubmit={handleSubscribe} className="flex items-center space-x-2">
-                <input
-                  type="email"
-                  required
-                  placeholder="Enter your email"
-                  value={email}
-                  onChange={e => setEmail(e.target.value)}
-                  className="w-full bg-[#0E131F] border border-white/10 rounded-xl px-3 py-2 text-xs text-white placeholder-gray-500 outline-none focus:border-red-500/50"
-                />
-                <button
-                  type="submit"
-                  className="p-2.5 bg-red-600 hover:bg-red-500 text-white rounded-xl transition-all shrink-0 shadow-md shadow-red-600/30"
-                  title="Subscribe"
-                >
-                  <Send className="w-4 h-4" />
-                </button>
-              </form>
-            )}
-
-            {/* "Have a Project in Mind?" Highlight Card */}
-            <div className="p-4 rounded-2xl bg-[#0D121D] border border-white/10 space-y-2 mt-4">
-              <div className="flex items-center space-x-3">
-                <div className="w-9 h-9 rounded-full bg-red-950/80 border border-red-500/30 flex items-center justify-center text-red-500 shrink-0">
-                  <Headphones className="w-4 h-4" />
-                </div>
-                <div>
-                  <h5 className="font-heading font-bold text-white text-xs">
-                    Have a Project in Mind?
-                  </h5>
-                  <p className="text-[11px] text-gray-400">
-                    Let's bring your imagination to life.
-                  </p>
-                </div>
-              </div>
-
-              <div className="pt-2">
-                <button
-                  onClick={() => onNavigate('get-quote')}
-                  className="text-red-500 hover:text-red-400 font-heading font-bold text-xs uppercase flex items-center space-x-1 tracking-wider transition-colors"
-                >
-                  <span>REQUEST A QUOTE</span>
-                  <ArrowRight className="w-3.5 h-3.5" />
-                </button>
-              </div>
-            </div>
           </div>
 
         </div>
@@ -359,13 +297,6 @@ export const Footer: React.FC<FooterProps> = ({ onNavigate, onOpenReel }) => {
               className="hover:text-white transition-colors"
             >
               Refund Policy
-            </button>
-            <span>•</span>
-            <button 
-              onClick={() => onNavigate('faq')} 
-              className="hover:text-white transition-colors"
-            >
-              Sitemap
             </button>
           </div>
         </div>
