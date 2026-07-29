@@ -5,6 +5,8 @@ import {defineConfig} from 'vite';
 
 export default defineConfig(() => {
   return {
+    // Base path for GitHub Pages project site. Change to your repo name.
+    base: '/vfx_web/',
     plugins: [react(), tailwindcss()],
     resolve: {
       alias: {
