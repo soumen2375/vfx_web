@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Mail, Phone, MapPin, Clock, Send, CheckCircle2, MessageSquare, Globe2 } from 'lucide-react';
+import { Mail, Phone, MapPin, Clock, Send, CheckCircle2, MessageSquare } from 'lucide-react';
 import { PageId } from '../types';
 import { LOCATIONS_DATA } from '../data/mockData';
 
@@ -107,7 +107,7 @@ export const ContactPage: React.FC<ContactPageProps> = ({ onNavigate }) => {
                     <label className="block text-xs font-mono text-gray-400 mb-1">Phone Number</label>
                     <input
                       type="tel"
-                      placeholder="+91 7319574918"
+                      placeholder="+91 8509587525"
                       value={formData.phone}
                       onChange={e => setFormData({ ...formData, phone: e.target.value })}
                       className="w-full bg-[#0B0E17] border border-white/10 rounded-xl px-4 py-3 text-xs text-white placeholder-gray-500 outline-none focus:border-red-500/50"
@@ -173,16 +173,6 @@ export const ContactPage: React.FC<ContactPageProps> = ({ onNavigate }) => {
                     <p className="text-gray-300 flex items-center gap-2"><Mail className="w-3.5 h-3.5 text-red-400 shrink-0" /> {loc.email}</p>
                   </div>
                 ))}
-              </div>
-
-              <div className="pt-2">
-                <button
-                  onClick={() => onNavigate('contact-details')}
-                  className="w-full py-3 rounded-xl bg-white/5 hover:bg-white/10 border border-white/10 text-red-400 text-xs font-heading font-bold flex items-center justify-center space-x-2 transition-all"
-                >
-                  <Globe2 className="w-4 h-4" />
-                  <span>VIEW ALL STUDIO DETAILS & MAPS</span>
-                </button>
               </div>
             </div>
           </div>

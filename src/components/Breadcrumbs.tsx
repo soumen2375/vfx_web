@@ -17,11 +17,11 @@ const PAGE_NAMES: Record<PageId, string> = {
   blog: 'Blog & Insights',
   faq: 'FAQ',
   contact: 'Contact Us',
-  'contact-details': 'Global Studios',
   'get-quote': 'Get a Quote',
   'privacy-policy': 'Privacy Policy',
   'terms-conditions': 'Terms & Conditions',
-  'refund-policy': 'Refund & Revision Policy'
+  'refund-policy': 'Refund & Revision Policy',
+  sitemap: 'Sitemap'
 };
 
 export const Breadcrumbs: React.FC<BreadcrumbsProps> = ({ currentPage, subTitle, onNavigate }) => {

@@ -47,7 +47,7 @@ export const RefundPolicyPage: React.FC<RefundPolicyPageProps> = ({ onNavigate }
         <div className="p-6 rounded-2xl bg-[#121723] border border-white/10 space-y-3">
           <h3 className="font-heading font-bold text-lg text-white">4. Direct Contact</h3>
           <p>
-            For billing inquiries or revision adjustments, contact Soumadip Dinda directly at <span className="text-red-400 font-mono font-bold">soumadipdinda18@gmail.com</span> or call <span className="text-red-400 font-mono font-bold">+91 7319574918</span>.
+            For billing inquiries or revision adjustments, contact Soumadip Dinda directly at <span className="text-red-400 font-mono font-bold">www.righttimefxstudio@gmail.com</span> or call <span className="text-red-400 font-mono font-bold">+91 8509587525</span>.
           </p>
         </div>
       </section>

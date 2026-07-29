@@ -7,11 +7,11 @@ export type PageId =
   | 'blog' 
   | 'faq' 
   | 'contact' 
-  | 'contact-details' 
   | 'get-quote' 
   | 'privacy-policy' 
   | 'terms-conditions' 
-  | 'refund-policy';
+  | 'refund-policy'
+  | 'sitemap';
 
 export interface ServiceItem {
   id: string;
@@ -77,6 +77,7 @@ export interface TeamMember {
   awards: string[];
   socials: {
     linkedin?: string;
+    email?: string;
     imdb?: string;
     vimeo?: string;
     instagram?: string;

@@ -12,8 +12,6 @@ export const BlogPage: React.FC<BlogPageProps> = ({ initialArticleId, onNavigate
   const [selectedPost, setSelectedPost] = useState<BlogPost | null>(null);
   const [searchQuery, setSearchQuery] = useState('');
   const [selectedCategory, setSelectedCategory] = useState('All');
-  const [email, setEmail] = useState('');
-  const [subscribed, setSubscribed] = useState(false);
 
   useEffect(() => {
     if (initialArticleId) {
@@ -31,11 +29,6 @@ export const BlogPage: React.FC<BlogPageProps> = ({ initialArticleId, onNavigate
       p.excerpt.toLowerCase().includes(searchQuery.toLowerCase());
     return matchesCat && matchesSearch;
   });
-
-  const handleSubscribe = (e: React.FormEvent) => {
-    e.preventDefault();
-    if (email) setSubscribed(true);
-  };
 
   return (
     <div className="space-y-16 pb-16">
@@ -128,41 +121,6 @@ export const BlogPage: React.FC<BlogPageProps> = ({ initialArticleId, onNavigate
               </div>
             </div>
           ))}
-        </div>
-      </section>
-
-      {/* Newsletter Section */}
-      <section className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="p-8 sm:p-12 rounded-3xl bg-gradient-to-r from-red-950/80 via-[#18101C] to-[#0B0E17] border border-red-500/40 text-center space-y-4">
-          <span className="text-xs font-mono text-red-400 font-bold uppercase tracking-widest">STAY AHEAD OF VFX INNOVATION</span>
-          <h3 className="text-2xl sm:text-3xl font-heading font-extrabold text-white">Subscribe to Right Time FX Dispatch</h3>
-          <p className="text-xs text-gray-300 max-w-lg mx-auto">
-            Get technical insights on roto/prep pipelines, Houdini simulations, and ACES color workflows delivered to your inbox.
-          </p>
-
-          {subscribed ? (
-            <div className="p-4 bg-red-950/80 border border-red-500/40 rounded-xl text-xs text-red-300 inline-flex items-center space-x-2 font-mono">
-              <CheckCircle className="w-4 h-4 text-red-400 shrink-0" />
-              <span>Subscribed! Thank you for joining our insider list.</span>
-            </div>
-          ) : (
-            <form onSubmit={handleSubscribe} className="max-w-md mx-auto flex gap-2">
-              <input
-                type="email"
-                required
-                placeholder="supervisor@studio.com"
-                value={email}
-                onChange={e => setEmail(e.target.value)}
-                className="flex-1 bg-white/5 border border-white/10 rounded-xl px-4 py-3 text-xs text-white placeholder-gray-500 outline-none focus:border-red-500/50"
-              />
-              <button
-                type="submit"
-                className="px-6 py-3 bg-gradient-to-r from-red-600 to-rose-700 hover:from-red-500 hover:to-rose-600 text-white font-heading text-xs font-bold rounded-xl shadow-lg shadow-red-600/30 transition-all shrink-0"
-              >
-                SUBSCRIBE
-              </button>
-            </form>
-          )}
         </div>
       </section>
 

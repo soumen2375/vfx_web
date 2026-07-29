@@ -1,21 +1,12 @@
-import React, { useState } from 'react';
+import React from 'react';
 import { 
-  Send, 
   MapPin, 
   Mail, 
   Phone, 
-  CheckCircle, 
-  ShieldCheck, 
-  Clock, 
-  Users, 
-  Globe, 
-  Headphones,
-  ArrowRight,
   Linkedin,
   Instagram,
   Youtube,
-  Twitter,
-  Radio
+  Twitter
 } from 'lucide-react';
 import { PageId } from '../types';
 import { RightTimeFXLogo } from './RightTimeFXLogo';
@@ -26,17 +17,6 @@ interface FooterProps {
 }
 
 export const Footer: React.FC<FooterProps> = ({ onNavigate, onOpenReel }) => {
-  const [email, setEmail] = useState('');
-  const [subscribed, setSubscribed] = useState(false);
-
-  const handleSubscribe = (e: React.FormEvent) => {
-    e.preventDefault();
-    if (email) {
-      setSubscribed(true);
-      setEmail('');
-    }
-  };
-
   return (
     <footer className="bg-[#050810] text-gray-400 border-t border-white/10 pt-16 pb-12 relative overflow-hidden">
       {/* Background glow accents */}
@@ -44,7 +24,7 @@ export const Footer: React.FC<FooterProps> = ({ onNavigate, onOpenReel }) => {
       <div className="absolute bottom-0 right-1/4 w-96 h-96 bg-rose-600/10 rounded-full blur-[140px] pointer-events-none" />
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 space-y-12">
-        {/* TOP MAIN GRID (3 Columns) */}
+        {/* TOP MAIN GRID (4 Columns) */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-12 gap-8 pb-10 border-b border-white/10">
           
           {/* Column 1: Brand & Contact (5 cols on lg) */}
@@ -70,59 +50,87 @@ export const Footer: React.FC<FooterProps> = ({ onNavigate, onOpenReel }) => {
               </div>
               <div className="flex items-center space-x-3 text-gray-300">
                 <Phone className="w-4 h-4 text-red-500 shrink-0" />
-                <a href="tel:+917319574918" className="hover:text-red-400 transition-colors font-mono">
-                  +91 7319574918
+                <a href="tel:+918509587525" className="hover:text-red-400 transition-colors font-mono">
+                  +918509587525
                 </a>
               </div>
               <div className="flex items-center space-x-3 text-gray-300">
                 <Mail className="w-4 h-4 text-red-500 shrink-0" />
-                <a href="mailto:producer@studio.com" className="hover:text-red-400 transition-colors font-mono">
-                  producer@studio.com
+                <a href="mailto:www.righttimefxstudio@gmail.com" className="hover:text-red-400 transition-colors font-mono">
+                  www.righttimefxstudio@gmail.com
                 </a>
               </div>
             </div>
 
             {/* Social Media Buttons */}
-            <div className="pt-2 flex items-center space-x-2">
+            <div className="pt-2 flex items-center space-x-3">
               <a 
                 href="https://linkedin.com" 
                 target="_blank" 
                 rel="noreferrer"
-                className="w-8 h-8 rounded-full bg-white/5 hover:bg-red-600 text-gray-400 hover:text-white border border-white/10 flex items-center justify-center transition-all"
+                aria-label="LinkedIn"
+                className="w-9 h-9 rounded-full bg-[#e5101a] hover:bg-[#c00010] text-white flex items-center justify-center transition-all duration-300 hover:scale-110 active:scale-95 shadow-md shadow-red-600/30"
               >
-                <Linkedin className="w-3.5 h-3.5" />
+                <Linkedin className="w-4 h-4" />
               </a>
               <a 
                 href="https://instagram.com" 
                 target="_blank" 
                 rel="noreferrer"
-                className="w-8 h-8 rounded-full bg-white/5 hover:bg-red-600 text-gray-400 hover:text-white border border-white/10 flex items-center justify-center transition-all"
+                aria-label="Instagram"
+                className="w-9 h-9 rounded-full bg-[#e5101a] hover:bg-[#c00010] text-white flex items-center justify-center transition-all duration-300 hover:scale-110 active:scale-95 shadow-md shadow-red-600/30"
               >
-                <Instagram className="w-3.5 h-3.5" />
+                <Instagram className="w-4 h-4" />
               </a>
               <a 
                 href="https://youtube.com" 
                 target="_blank" 
                 rel="noreferrer"
-                className="w-8 h-8 rounded-full bg-white/5 hover:bg-red-600 text-gray-400 hover:text-white border border-white/10 flex items-center justify-center transition-all"
+                aria-label="YouTube"
+                className="w-9 h-9 rounded-full bg-[#e5101a] hover:bg-[#c00010] text-white flex items-center justify-center transition-all duration-300 hover:scale-110 active:scale-95 shadow-md shadow-red-600/30"
               >
-                <Youtube className="w-3.5 h-3.5" />
+                <Youtube className="w-4 h-4" />
               </a>
               <a 
                 href="https://x.com" 
                 target="_blank" 
                 rel="noreferrer"
-                className="w-8 h-8 rounded-full bg-white/5 hover:bg-red-600 text-gray-400 hover:text-white border border-white/10 flex items-center justify-center transition-all"
+                aria-label="Twitter"
+                className="w-9 h-9 rounded-full bg-[#e5101a] hover:bg-[#c00010] text-white flex items-center justify-center transition-all duration-300 hover:scale-110 active:scale-95 shadow-md shadow-red-600/30"
               >
-                <Twitter className="w-3.5 h-3.5" />
+                <Twitter className="w-4 h-4" />
               </a>
             </div>
           </div>
 
-          {/* Column 2: STUDIO (3 cols on lg) */}
-          <div className="lg:col-span-3 space-y-3">
+          {/* Column 2: NAVIGATION (2 cols on lg) */}
+          <div className="lg:col-span-2 space-y-3">
             <h4 className="font-heading font-bold text-white text-xs tracking-widest uppercase mb-4">
-              STUDIO
+              NAVIGATION
+            </h4>
+            <ul className="space-y-2.5 text-xs">
+              <li>
+                <button onClick={() => onNavigate('services')} className="hover:text-white transition-colors">
+                  Services
+                </button>
+              </li>
+              <li>
+                <button onClick={() => onNavigate('portfolio')} className="hover:text-white transition-colors">
+                  Portfolio
+                </button>
+              </li>
+              <li>
+                <button onClick={onOpenReel} className="hover:text-white transition-colors">
+                  Studio Reel
+                </button>
+              </li>
+            </ul>
+          </div>
+
+          {/* Column 3: COMPANY (2 cols on lg) */}
+          <div className="lg:col-span-2 space-y-3">
+            <h4 className="font-heading font-bold text-white text-xs tracking-widest uppercase mb-4">
+              COMPANY
             </h4>
             <ul className="space-y-2.5 text-xs">
               <li>
@@ -131,8 +139,8 @@ export const Footer: React.FC<FooterProps> = ({ onNavigate, onOpenReel }) => {
                 </button>
               </li>
               <li>
-                <button onClick={() => onNavigate('contact-details')} className="hover:text-white transition-colors">
-                  Contact Details
+                <button onClick={() => onNavigate('blog')} className="hover:text-white transition-colors">
+                  Blog
                 </button>
               </li>
               <li>
@@ -140,52 +148,38 @@ export const Footer: React.FC<FooterProps> = ({ onNavigate, onOpenReel }) => {
                   FAQ
                 </button>
               </li>
+              <li>
+                <button onClick={() => onNavigate('contact')} className="hover:text-white transition-colors">
+                  Contact
+                </button>
+              </li>
             </ul>
           </div>
 
-          {/* Column 3: SERVICES (4 cols on lg) */}
-          <div className="lg:col-span-4 space-y-3">
+          {/* Column 4: LEGAL (3 cols on lg) */}
+          <div className="lg:col-span-3 space-y-3">
             <h4 className="font-heading font-bold text-white text-xs tracking-widest uppercase mb-4">
-              SERVICES
+              LEGAL
             </h4>
             <ul className="space-y-2.5 text-xs">
               <li>
-                <button onClick={() => onNavigate('services', 'vfx-compositing')} className="hover:text-white transition-colors">
-                  VFX Compositing
+                <button onClick={() => onNavigate('terms-conditions')} className="hover:text-white transition-colors">
+                  Terms & Conditions
                 </button>
               </li>
               <li>
-                <button onClick={() => onNavigate('services', 'rotoscoping')} className="hover:text-white transition-colors">
-                  Rotoscoping & Paint
+                <button onClick={() => onNavigate('privacy-policy')} className="hover:text-white transition-colors">
+                  Privacy Policy
                 </button>
               </li>
               <li>
-                <button onClick={() => onNavigate('services', 'cgi')} className="hover:text-white transition-colors">
-                  CGI & 3D Animation
+                <button onClick={() => onNavigate('refund-policy')} className="hover:text-white transition-colors">
+                  Cancellation & Refunds
                 </button>
               </li>
               <li>
-                <button onClick={() => onNavigate('services', 'matchmove-tracking')} className="hover:text-white transition-colors">
-                  Matchmove & Tracking
-                </button>
-              </li>
-              <li>
-                <button onClick={() => onNavigate('services', 'virtual-production')} className="hover:text-white transition-colors">
-                  Virtual Production
-                </button>
-              </li>
-              <li>
-                <button onClick={() => onNavigate('services', 'fx-simulation')} className="hover:text-white transition-colors">
-                  FX Simulation
-                </button>
-              </li>
-              <li className="pt-1">
-                <button 
-                  onClick={() => onNavigate('services')} 
-                  className="text-red-500 font-bold text-xs flex items-center space-x-1 hover:underline"
-                >
-                  <span>All Services</span>
-                  <ArrowRight className="w-3.5 h-3.5" />
+                <button onClick={() => onNavigate('sitemap')} className="hover:text-white transition-colors">
+                  Sitemap
                 </button>
               </li>
             </ul>
@@ -193,112 +187,12 @@ export const Footer: React.FC<FooterProps> = ({ onNavigate, onOpenReel }) => {
 
         </div>
 
-        {/* MIDDLE SECTION: TRUST METRICS / BADGES BAR */}
-        <div className="p-5 rounded-2xl bg-[#0B0F19] border border-white/10 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-6 divide-y sm:divide-y-0 lg:divide-x divide-white/10">
-          
-          {/* Badge 1: Secure & Confidential */}
-          <div className="flex items-center space-x-3.5 pt-3 sm:pt-0 lg:pl-0">
-            <div className="w-10 h-10 rounded-xl bg-red-950/60 border border-red-500/30 flex items-center justify-center text-red-500 shrink-0">
-              <ShieldCheck className="w-5 h-5" />
-            </div>
-            <div>
-              <h6 className="font-heading font-bold text-white text-xs">
-                Secure & Confidential
-              </h6>
-              <p className="text-[10px] text-gray-400">
-                Your data is 100% safe with us
-              </p>
-            </div>
-          </div>
-
-          {/* Badge 2: On-Time Delivery */}
-          <div className="flex items-center space-x-3.5 pt-3 sm:pt-0 lg:pl-6">
-            <div className="w-10 h-10 rounded-xl bg-red-950/60 border border-red-500/30 flex items-center justify-center text-red-500 shrink-0">
-              <Clock className="w-5 h-5" />
-            </div>
-            <div>
-              <h6 className="font-heading font-bold text-white text-xs">
-                On-Time Delivery
-              </h6>
-              <p className="text-[10px] text-gray-400">
-                We respect your deadlines
-              </p>
-            </div>
-          </div>
-
-          {/* Badge 3: Expert VFX Team */}
-          <div className="flex items-center space-x-3.5 pt-3 sm:pt-0 lg:pl-6">
-            <div className="w-10 h-10 rounded-xl bg-red-950/60 border border-red-500/30 flex items-center justify-center text-red-500 shrink-0">
-              <Users className="w-5 h-5" />
-            </div>
-            <div>
-              <h6 className="font-heading font-bold text-white text-xs">
-                Expert VFX Team
-              </h6>
-              <p className="text-[10px] text-gray-400">
-                100+ skilled professionals
-              </p>
-            </div>
-          </div>
-
-          {/* Badge 4: Global Standards */}
-          <div className="flex items-center space-x-3.5 pt-3 sm:pt-0 lg:pl-6">
-            <div className="w-10 h-10 rounded-xl bg-red-950/60 border border-red-500/30 flex items-center justify-center text-red-500 shrink-0">
-              <Globe className="w-5 h-5" />
-            </div>
-            <div>
-              <h6 className="font-heading font-bold text-white text-xs">
-                Global Standards
-              </h6>
-              <p className="text-[10px] text-gray-400">
-                Delivering world-class quality
-              </p>
-            </div>
-          </div>
-
-          {/* Badge 5: 24/7 Production Sync */}
-          <div className="flex items-center space-x-3.5 pt-3 sm:pt-0 lg:pl-6">
-            <div className="w-10 h-10 rounded-xl bg-red-950/60 border border-red-500/30 flex items-center justify-center text-red-500 shrink-0">
-              <Radio className="w-5 h-5 text-red-500 animate-pulse" />
-            </div>
-            <div>
-              <h6 className="font-heading font-bold text-white text-xs">
-                24/7 Production Sync
-              </h6>
-              <p className="text-[10px] text-gray-400">
-                Real-time communication
-              </p>
-            </div>
-          </div>
-
-        </div>
-
-        {/* BOTTOM COPYRIGHT & POLICY LINKS */}
+        {/* BOTTOM COPYRIGHT & POWERED BY */}
         <div className="pt-4 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs text-gray-400">
           <p>© 2026 Right Time FX Studio. All Rights Reserved.</p>
-
-          <div className="flex items-center space-x-3 text-xs">
-            <button 
-              onClick={() => onNavigate('privacy-policy')} 
-              className="hover:text-white transition-colors"
-            >
-              Privacy Policy
-            </button>
-            <span>•</span>
-            <button 
-              onClick={() => onNavigate('terms-conditions')} 
-              className="hover:text-white transition-colors"
-            >
-              Terms & Conditions
-            </button>
-            <span>•</span>
-            <button 
-              onClick={() => onNavigate('refund-policy')} 
-              className="hover:text-white transition-colors"
-            >
-              Refund Policy
-            </button>
-          </div>
+          <p className="text-gray-400">
+            Powered by <span className="font-bold text-white hover:text-[#e5101a] transition-colors">Riknova Technology</span>
+          </p>
         </div>
       </div>
     </footer>

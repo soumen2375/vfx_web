@@ -1,4 +1,7 @@
 import { ServiceItem, PortfolioItem, CaseStudy, TeamMember, BlogPost, FAQItem, StudioLocation } from '../types';
+import founderImg from '../../assets/images/FOUNDER_headshot.jpeg';
+import hrImg from '../../assets/images/HR_headshot.png';
+import teamLeaderImg from '../../assets/images/TEAMLEADER_headshot.png';
 
 export const STUDIO_INFO = {
   name: 'Right Time FX Studio',
@@ -31,9 +34,9 @@ export const STUDIO_INFO = {
     ]
   },
   contact: {
-    email: 'soumadipdinda18@gmail.com',
-    phone: '7319574918',
-    phoneFormatted: '+91 7319574918',
+    email: 'www.righttimefxstudio@gmail.com',
+    phone: '8509587525',
+    phoneFormatted: '+91 8509587525',
     country: 'India',
     address: 'Right Time FX Studio, National VFX & Post-Production Hub, India'
   },
@@ -524,43 +527,33 @@ export const CASE_STUDIES_DATA: CaseStudy[] = [
 export const TEAM_MEMBERS: TeamMember[] = [
   {
     id: 'team-1',
-    name: 'Julian Vance',
-    role: 'Co-Founder & Chief Creative Officer',
-    bio: 'Former Senior VFX Supervisor at ILM and Framestore with over 20 years of experience directing visual effects for Oscar-winning feature films.',
-    image: 'https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=600&q=80',
-    credits: ['Avatar: The Way of Water', 'Dune Part Two', 'Interstellar', 'Chronos'],
-    awards: ['Academy Sci-Tech Award 2023', 'VES Lifetime Fellow'],
-    socials: { linkedin: '#', imdb: '#' }
+    name: 'Soumadip Dinda (Vijay Souma)',
+    role: 'CEO & Founder',
+    bio: 'Visionary leader with 10+ years in VFX production and studio management.',
+    image: founderImg,
+    credits: ['Feature Film VFX', 'Episodic TV', 'Commercial Campaigns'],
+    awards: ['VFX Studio Innovator 2024'],
+    socials: { linkedin: 'https://linkedin.com', email: 'mailto:www.righttimefxstudio@gmail.com' }
   },
   {
     id: 'team-2',
-    name: 'Dr. Evelyn Chen',
-    role: 'Head of Pipeline & AI Research',
-    bio: 'Ph.D. in Computer Graphics from MIT. Pioneer in deep-learning rotoscoping models and real-time volumetric rendering engines.',
-    image: 'https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&w=600&q=80',
-    credits: ['Aetheria', 'The Sovereign Galaxy', 'Cyber-Hypercar'],
-    awards: ['ACM SIGGRAPH Innovator Award'],
-    socials: { linkedin: '#' }
+    name: 'Mallika Bera',
+    role: 'HR DIRECTOR',
+    bio: 'Driving a people-first culture and building a creative, inclusive workplace.',
+    image: hrImg,
+    credits: ['Talent Acquisition', 'Culture & Operations'],
+    awards: ['HR Excellence in Creative Media'],
+    socials: { linkedin: 'https://linkedin.com', email: 'mailto:www.righttimefxstudio@gmail.com' }
   },
   {
     id: 'team-3',
-    name: 'Marcus Sterling',
-    role: 'Executive Producer & Managing Director',
-    bio: 'Over 18 years managing multi-million dollar global post-production pipelines across Los Angeles, London, and Vancouver.',
-    image: 'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=600&q=80',
-    credits: ['Blade Runner 2049', 'The Mandalorian', 'Chronos'],
-    awards: ['Producers Guild Excellence Award'],
-    socials: { linkedin: '#' }
-  },
-  {
-    id: 'team-4',
-    name: 'Aria Thorne',
-    role: 'Senior VFX & Creature Supervisor',
-    bio: 'Master of anatomical sculpts and creature dynamics. Leads a team of 80 CG artists specializing in hyper-realistic digital double performance.',
-    image: 'https://images.unsplash.com/photo-1580489944761-15a19d654956?auto=format&fit=crop&w=600&q=80',
-    credits: ['Aetheria', 'House of the Dragon', 'Jurassic World'],
-    awards: ['VES Award Winner 2024'],
-    socials: { linkedin: '#' }
+    name: 'Purnima Mondal',
+    role: 'Team Lead',
+    bio: 'Leading project teams to deliver exceptional visuals with precision and on-time delivery.',
+    image: teamLeaderImg,
+    credits: ['Complex Compositing', 'Asset Pipelines'],
+    awards: ['Outstanding Team Leadership 2023'],
+    socials: { linkedin: 'https://linkedin.com', email: 'mailto:www.righttimefxstudio@gmail.com' }
   }
 ];
 
@@ -689,34 +682,12 @@ export const LOCATIONS_DATA: StudioLocation[] = [
     city: 'Moyna & Purba Medinipur Main Studio',
     country: 'India',
     address: 'Mondal Building 4th Floor, Dakbanglow-Moyna Rd, Sudampur, Balaipanda Bazar, Moyna, Purba Medinipur, West Bengal, 721644, India',
-    phone: '+91 7319574918',
-    email: 'soumadipdinda18@gmail.com',
+    phone: '+91 8509587525',
+    email: 'www.righttimefxstudio@gmail.com',
     hours: '24/7 Production & Client Operations',
     isHeadquarters: true,
     mapCoordinates: { lat: 22.2570, lng: 87.7788 },
     image: 'https://images.unsplash.com/photo-1570168007204-dfb528c6958f?auto=format&fit=crop&w=600&q=80'
-  },
-  {
-    id: 'loc-la',
-    city: 'Los Angeles Outsourcing Portal',
-    country: 'United States',
-    address: 'Hollywood Partner Hub, Los Angeles, CA 90069',
-    phone: '+91 7319574918',
-    email: 'soumadipdinda18@gmail.com',
-    hours: 'PST Sync Available Daily',
-    mapCoordinates: { lat: 34.0522, lng: -118.2437 },
-    image: 'https://images.unsplash.com/photo-1580655653885-65763b2597d0?auto=format&fit=crop&w=600&q=80'
-  },
-  {
-    id: 'loc-london',
-    city: 'London European Operations',
-    country: 'United Kingdom',
-    address: 'Soho Film District Hub, London W1D 3QB',
-    phone: '+91 7319574918',
-    email: 'soumadipdinda18@gmail.com',
-    hours: 'GMT Sync Available Daily',
-    mapCoordinates: { lat: 51.5074, lng: -0.1278 },
-    image: 'https://images.unsplash.com/photo-1513635269975-59663e0ac1ad?auto=format&fit=crop&w=600&q=80'
   }
 ];
 

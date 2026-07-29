@@ -42,7 +42,7 @@ export const TermsPage: React.FC<TermsPageProps> = ({ onNavigate }) => {
         <div className="p-6 rounded-2xl bg-[#121723] border border-white/10 space-y-3">
           <h3 className="font-heading font-bold text-lg text-white">4. Payment Terms & Milestone Sign-Off</h3>
           <p>
-            Standard studio billing operates on structured milestone schedules (Advance, Mid-point Review, Final Delivery Sign-Off). Direct studio contact for billing and accounts: <span className="text-red-400 font-mono font-bold">soumadipdinda18@gmail.com</span> / <span className="text-red-400 font-mono font-bold">+91 7319574918</span>.
+            Standard studio billing operates on structured milestone schedules (Advance, Mid-point Review, Final Delivery Sign-Off). Direct studio contact for billing and accounts: <span className="text-red-400 font-mono font-bold">www.righttimefxstudio@gmail.com</span> / <span className="text-red-400 font-mono font-bold">+91 8509587525</span>.
           </p>
         </div>
 

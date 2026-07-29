@@ -5,7 +5,6 @@ import { Footer } from './components/Footer';
 import { Breadcrumbs } from './components/Breadcrumbs';
 import { SearchModal } from './components/SearchModal';
 import { ShowreelModal } from './components/ShowreelModal';
-import { CookieBanner } from './components/CookieBanner';
 import { LiveChatWidget } from './components/LiveChatWidget';
 import { FloatingActions } from './components/FloatingActions';
 
@@ -17,11 +16,11 @@ import { CaseStudiesPage } from './pages/CaseStudiesPage';
 import { BlogPage } from './pages/BlogPage';
 import { FaqPage } from './pages/FaqPage';
 import { ContactPage } from './pages/ContactPage';
-import { ContactDetailsPage } from './pages/ContactDetailsPage';
 import { GetQuotePage } from './pages/GetQuotePage';
 import { PrivacyPolicyPage } from './pages/PrivacyPolicyPage';
 import { TermsPage } from './pages/TermsPage';
 import { RefundPolicyPage } from './pages/RefundPolicyPage';
+import { SitemapPage } from './pages/SitemapPage';
 
 export default function App() {
   const [currentPage, setCurrentPage] = useState<PageId>('home');
@@ -75,7 +74,10 @@ export default function App() {
         )}
 
         {currentPage === 'about' && (
-          <AboutPage onNavigate={handleNavigate} />
+          <AboutPage 
+            onNavigate={handleNavigate}
+            onOpenReel={() => setReelOpen(true)}
+          />
         )}
 
         {currentPage === 'services' && (
@@ -114,10 +116,6 @@ export default function App() {
           <ContactPage onNavigate={handleNavigate} />
         )}
 
-        {currentPage === 'contact-details' && (
-          <ContactDetailsPage onNavigate={handleNavigate} />
-        )}
-
         {currentPage === 'get-quote' && (
           <GetQuotePage onNavigate={handleNavigate} />
         )}
@@ -132,6 +130,13 @@ export default function App() {
 
         {currentPage === 'refund-policy' && (
           <RefundPolicyPage onNavigate={handleNavigate} />
+        )}
+
+        {currentPage === 'sitemap' && (
+          <SitemapPage
+            onNavigate={handleNavigate}
+            onOpenReel={() => setReelOpen(true)}
+          />
         )}
       </main>
 
@@ -150,7 +155,6 @@ export default function App() {
         onClose={() => setReelOpen(false)}
       />
 
-      <CookieBanner />
       <LiveChatWidget />
       <FloatingActions />
     </div>

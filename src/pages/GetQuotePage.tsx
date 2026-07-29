@@ -307,7 +307,7 @@ export const GetQuotePage: React.FC<GetQuotePageProps> = ({ onNavigate }) => {
                       <input
                         type="email"
                         required
-                        placeholder="soumadipdinda18@gmail.com"
+                        placeholder="www.righttimefxstudio@gmail.com"
                         value={formData.email}
                         onChange={e => setFormData({ ...formData, email: e.target.value })}
                         className="w-full bg-[#0B0E17] border border-white/10 rounded-xl p-3 text-xs text-white outline-none focus:border-red-500/50"
@@ -317,7 +317,7 @@ export const GetQuotePage: React.FC<GetQuotePageProps> = ({ onNavigate }) => {
                       <label className="block text-xs font-mono text-gray-400 mb-1">Phone Number</label>
                       <input
                         type="tel"
-                        placeholder="+91 7319574918"
+                        placeholder="+91 8509587525"
                         value={formData.phone}
                         onChange={e => setFormData({ ...formData, phone: e.target.value })}
                         className="w-full bg-[#0B0E17] border border-white/10 rounded-xl p-3 text-xs text-white outline-none focus:border-red-500/50"
