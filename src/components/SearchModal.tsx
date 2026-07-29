@@ -53,7 +53,7 @@ export const SearchModal: React.FC<SearchModalProps> = ({ isOpen, onClose, onNav
           )}
           <button
             onClick={onClose}
-            className="px-2.5 py-1 text-xs font-mono bg-white/10 text-gray-300 rounded hover:bg-white/20 transition-colors"
+            className="px-2.5 py-1 text-xs font-heading font-semibold bg-white/10 text-gray-300 rounded hover:bg-white/20 transition-colors"
           >
             ESC
           </button>

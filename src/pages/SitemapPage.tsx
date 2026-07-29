@@ -34,10 +34,7 @@ export const SitemapPage: React.FC<SitemapPageProps> = ({ onNavigate, onOpenReel
       {/* Hero Section */}
       <section className="relative py-16 border-b border-white/10 bg-gradient-to-b from-red-950/40 via-[#0C1321] to-[#0C1321]">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <span className="text-xs font-mono text-[#E5101A] tracking-widest uppercase font-bold">
-            SITE NAVIGATION & MAP
-          </span>
-          <h1 className="text-4xl sm:text-6xl font-heading font-extrabold text-white mt-3 leading-tight">
+          <h1 className="text-4xl sm:text-6xl font-heading font-extrabold text-white leading-tight">
             Right Time FX <span className="text-[#E5101A] drop-shadow-[0_4px_20px_rgba(229,16,26,0.4)]">Sitemap</span>
           </h1>
           <p className="mt-4 text-gray-300 max-w-2xl mx-auto text-sm sm:text-base leading-relaxed">
