@@ -52,8 +52,7 @@ export const GetQuotePage: React.FC<GetQuotePageProps> = ({ onNavigate }) => {
       {/* Header */}
       <section className="relative py-12 border-b border-white/10 bg-gradient-to-b from-red-950/40 via-[#0B0E17] to-[#0B0E17]">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <span className="text-xs font-mono text-red-500 tracking-widest uppercase font-bold">INTERACTIVE ESTIMATE BUILDER</span>
-          <h1 className="text-3xl sm:text-5xl font-heading font-extrabold text-white mt-2 leading-tight">
+          <h1 className="text-3xl sm:text-5xl font-heading font-extrabold text-white leading-tight">
             Right Time FX Studio <br />
             <span className="text-red-500 drop-shadow-[0_4px_20px_rgba(220,38,38,0.4)]">
               VFX Production Quote
@@ -65,7 +64,7 @@ export const GetQuotePage: React.FC<GetQuotePageProps> = ({ onNavigate }) => {
 
           {/* Step Progress Bar */}
           {!submitted && (
-            <div className="mt-8 max-w-2xl mx-auto flex items-center justify-between text-xs font-mono text-gray-400">
+            <div className="mt-8 max-w-2xl mx-auto flex items-center justify-between text-xs font-heading font-semibold text-gray-300">
               {['Project Type', 'Services', 'Format & Scale', 'Timeline', 'Contact'].map((sName, i) => {
                 const stepNum = i + 1;
                 const active = step === stepNum;

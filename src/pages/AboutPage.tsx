@@ -95,10 +95,6 @@ export const AboutPage: React.FC<AboutPageProps> = ({ onNavigate, onOpenReel }) 
         </div>
 
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 text-center space-y-6">
-          <span className="inline-flex items-center space-x-2 px-3.5 py-1 rounded-full bg-[#e5101a]/15 border border-[#e5101a]/40 text-[#e5101a] text-xs font-mono font-bold tracking-widest uppercase animate-fadeIn">
-            <span>ABOUT RIGHT TIME FX STUDIO</span>
-          </span>
-
           <h1 className="text-4xl sm:text-6xl lg:text-7xl font-heading font-extrabold text-white tracking-tight leading-none">
             Crafting Realities. <br />
             <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#e5101a] via-rose-500 to-red-400">
@@ -163,7 +159,7 @@ export const AboutPage: React.FC<AboutPageProps> = ({ onNavigate, onOpenReel }) 
       {/* 3. EVOLUTIONARY ROADMAP */}
       <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-12">
         <div className="text-center space-y-2">
-          <span className="text-xs font-mono text-[#e5101a] font-bold uppercase tracking-widest">
+          <span className="text-xs font-heading text-[#e5101a] font-semibold uppercase tracking-widest">
             OUR JOURNEY
           </span>
           <h2 className="text-3xl sm:text-4xl font-heading font-extrabold text-white">
@@ -204,7 +200,7 @@ export const AboutPage: React.FC<AboutPageProps> = ({ onNavigate, onOpenReel }) 
       {/* 4. LEADERSHIP (VISIONARIES BEHIND THE MAGIC) */}
       <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-12">
         <div className="text-center space-y-2">
-          <span className="text-xs font-mono text-[#e5101a] font-bold uppercase tracking-widest">
+          <span className="text-xs font-heading text-[#e5101a] font-semibold uppercase tracking-widest">
             LEADERSHIP
           </span>
           <h2 className="text-3xl sm:text-4xl font-heading font-extrabold text-white">
@@ -234,7 +230,7 @@ export const AboutPage: React.FC<AboutPageProps> = ({ onNavigate, onOpenReel }) 
               {/* Text Info Box */}
               <div className="p-6 bg-[#090e1a] border-t border-[#e5101a]/30 flex flex-col justify-between flex-1 space-y-4">
                 <div>
-                  <span className="inline-block px-2.5 py-1 rounded-md bg-[#e5101a]/15 border border-[#e5101a]/40 text-[#e5101a] text-[11px] font-mono font-bold uppercase tracking-wider mb-2">
+                  <span className="inline-block px-2.5 py-1 rounded-md bg-white/5 border border-white/10 text-red-400 text-[11px] font-heading font-semibold uppercase tracking-wider mb-2">
                     {member.role}
                   </span>
                   <h3 className="font-heading font-extrabold text-white text-xl group-hover:text-[#e5101a] transition-colors">
@@ -279,7 +275,7 @@ export const AboutPage: React.FC<AboutPageProps> = ({ onNavigate, onOpenReel }) 
       <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="p-8 sm:p-12 rounded-3xl bg-[#090e1a] border border-white/10 relative overflow-hidden grid grid-cols-1 lg:grid-cols-12 gap-8 items-center shadow-2xl">
           <div className="lg:col-span-6 space-y-6">
-            <span className="text-xs font-mono text-[#e5101a] font-bold uppercase tracking-widest">
+            <span className="text-xs font-heading text-[#e5101a] font-semibold uppercase tracking-widest">
               GLOBAL PRESENCE
             </span>
             <h2 className="text-3xl sm:text-4xl font-heading font-extrabold text-white">
@@ -294,19 +290,19 @@ export const AboutPage: React.FC<AboutPageProps> = ({ onNavigate, onOpenReel }) 
                 <span className="text-2xl sm:text-3xl font-heading font-extrabold text-[#e5101a] block">
                   20+
                 </span>
-                <span className="text-[11px] font-mono text-gray-400 uppercase">Countries</span>
+                <span className="text-[11px] font-heading text-gray-400 uppercase">Countries</span>
               </div>
               <div>
                 <span className="text-2xl sm:text-3xl font-heading font-extrabold text-[#e5101a] block">
                   100+
                 </span>
-                <span className="text-[11px] font-mono text-gray-400 uppercase">Global Clients</span>
+                <span className="text-[11px] font-heading text-gray-400 uppercase">Global Clients</span>
               </div>
               <div>
                 <span className="text-2xl sm:text-3xl font-heading font-extrabold text-[#e5101a] block">
                   500+
                 </span>
-                <span className="text-[11px] font-mono text-gray-400 uppercase">Projects Delivered</span>
+                <span className="text-[11px] font-heading text-gray-400 uppercase">Projects Delivered</span>
               </div>
             </div>
           </div>
@@ -320,7 +316,7 @@ export const AboutPage: React.FC<AboutPageProps> = ({ onNavigate, onOpenReel }) 
               <p className="text-xs text-gray-300 leading-relaxed font-body">
                 Mondal Building 4th Floor, Dakbanglow-Moyna Rd, Sudampur, Balaipanda Bazar, Moyna, Purba Medinipur, West Bengal 721644, India
               </p>
-              <div className="p-3 rounded-xl bg-[#e5101a]/15 border border-[#e5101a]/40 text-xs text-[#e5101a] font-mono font-bold flex items-center justify-between">
+              <div className="p-3 rounded-xl bg-white/5 border border-white/10 text-xs text-red-400 font-heading font-semibold flex items-center justify-between">
                 <span>HEAD OFFICE: West Bengal, India</span>
                 <span className="w-2 h-2 rounded-full bg-[#e5101a] animate-ping" />
               </div>
@@ -354,7 +350,7 @@ export const AboutPage: React.FC<AboutPageProps> = ({ onNavigate, onOpenReel }) 
       {/* 7. STUDIO PULSE / GALLERY */}
       <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-8">
         <div className="text-center space-y-2">
-          <span className="text-xs font-mono text-[#e5101a] font-bold uppercase tracking-widest">
+          <span className="text-xs font-heading text-[#e5101a] font-semibold uppercase tracking-widest">
             STUDIO PULSE
           </span>
           <h2 className="text-3xl sm:text-4xl font-heading font-extrabold text-white">

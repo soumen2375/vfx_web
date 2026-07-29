@@ -28,8 +28,7 @@ export const ContactPage: React.FC<ContactPageProps> = ({ onNavigate }) => {
       {/* Header Banner */}
       <section className="relative py-16 border-b border-white/10 bg-gradient-to-b from-red-950/40 via-[#0B0E17] to-[#0B0E17]">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <span className="text-xs font-mono text-red-500 tracking-widest uppercase font-bold">PRODUCTION INQUIRIES</span>
-          <h1 className="text-4xl sm:text-6xl font-heading font-extrabold text-white mt-3 leading-tight">
+          <h1 className="text-4xl sm:text-6xl font-heading font-extrabold text-white leading-tight">
             Connect With Our <br />
             <span className="text-red-500 drop-shadow-[0_4px_20px_rgba(220,38,38,0.4)]">
               VFX Producers & Team

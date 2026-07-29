@@ -65,10 +65,6 @@ export const HomePage: React.FC<HomePageProps> = ({ onNavigate, onOpenReel }) =>
 
         {/* Hero Content */}
         <div className="relative z-30 px-6 md:px-16 text-center max-w-5xl mx-auto pt-24 pb-20">
-          <span className="inline-block text-[#e5101a] text-xs font-mono font-semibold tracking-[0.25em] uppercase mb-6 bg-[#e5101a]/10 border border-[#e5101a]/30 px-4 py-1.5 rounded-full backdrop-blur-md">
-            Next-Generation Post-Production
-          </span>
-
           <h1 className="font-heading font-extrabold text-4xl sm:text-6xl md:text-7xl lg:text-8xl text-white tracking-tight leading-[1.1] mb-8">
             Crafting <span className="text-[#e5101a] text-glow drop-shadow-[0_0_25px_rgba(229,16,26,0.5)]">Hollywood-Level</span> Visual Effects.
           </h1>
@@ -113,7 +109,7 @@ export const HomePage: React.FC<HomePageProps> = ({ onNavigate, onOpenReel }) =>
       {/* 2. TRUSTED CLIENTS (LOGO REEL MARQUEE) */}
       <section className="py-20 bg-[#0c1321] border-y border-white/5 overflow-hidden">
         <div className="max-w-7xl mx-auto px-6 mb-12 text-center">
-          <p className="text-xs font-mono text-[#e8bcb7] tracking-[0.2em] uppercase opacity-60 font-semibold">
+          <p className="text-xs font-heading text-gray-400 tracking-widest uppercase opacity-75 font-semibold">
             Trusted by Global Studios & Directors
           </p>
         </div>
@@ -141,7 +137,7 @@ export const HomePage: React.FC<HomePageProps> = ({ onNavigate, onOpenReel }) =>
         <div className="max-w-7xl mx-auto">
           <div className="flex flex-col md:flex-row md:items-end justify-between mb-16 gap-8">
             <div className="max-w-2xl">
-              <span className="text-xs font-mono text-[#e5101a] tracking-[0.2em] uppercase block mb-4 font-semibold">
+              <span className="text-xs font-heading text-[#e5101a] tracking-widest uppercase block mb-4 font-semibold">
                 Core Competencies
               </span>
               <h2 className="text-3xl sm:text-5xl font-heading font-bold text-white tracking-tight">
@@ -291,10 +287,10 @@ export const HomePage: React.FC<HomePageProps> = ({ onNavigate, onOpenReel }) =>
             </div>
 
             {/* Labels */}
-            <div className="absolute top-6 left-6 z-30 text-xs font-mono font-bold bg-black/60 text-white px-4 py-2 rounded-full backdrop-blur-md">
+            <div className="absolute top-6 left-6 z-30 text-xs font-heading font-semibold bg-black/70 text-white px-4 py-2 rounded-full backdrop-blur-md border border-white/10">
               RAW FOOTAGE
             </div>
-            <div className="absolute top-6 right-6 z-30 text-xs font-mono font-bold bg-[#e5101a]/80 text-white px-4 py-2 rounded-full backdrop-blur-md">
+            <div className="absolute top-6 right-6 z-30 text-xs font-heading font-semibold bg-[#e5101a]/90 text-white px-4 py-2 rounded-full backdrop-blur-md">
               FINAL RENDER
             </div>
           </div>
@@ -329,7 +325,7 @@ export const HomePage: React.FC<HomePageProps> = ({ onNavigate, onOpenReel }) =>
               />
               <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/20 to-transparent opacity-60 group-hover:opacity-80 transition-opacity" />
               <div className="absolute bottom-0 left-0 p-10 transform transition-transform duration-500 group-hover:translate-y-[-10px]">
-                <span className="text-xs font-mono text-[#e5101a] uppercase font-bold tracking-widest block mb-2">Feature Film</span>
+                <span className="text-xs font-heading text-red-400 uppercase font-bold tracking-widest block mb-2">Feature Film</span>
                 <h3 className="font-heading font-semibold text-2xl sm:text-4xl text-white">The Last Wyvern</h3>
               </div>
             </div>
@@ -345,7 +341,7 @@ export const HomePage: React.FC<HomePageProps> = ({ onNavigate, onOpenReel }) =>
               />
               <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-transparent to-transparent opacity-60 group-hover:opacity-80 transition-opacity" />
               <div className="absolute bottom-0 left-0 p-8 transform transition-transform duration-500 group-hover:translate-y-[-10px]">
-                <span className="text-xs font-mono text-[#e5101a] uppercase font-bold tracking-widest block mb-2">Brand Commercial</span>
+                <span className="text-xs font-heading text-red-400 uppercase font-bold tracking-widest block mb-2">Brand Commercial</span>
                 <h3 className="font-heading font-semibold text-xl sm:text-2xl text-white">Apex Motion 2024</h3>
               </div>
             </div>
@@ -360,7 +356,7 @@ export const HomePage: React.FC<HomePageProps> = ({ onNavigate, onOpenReel }) =>
                 style={{ backgroundImage: `url('https://images.unsplash.com/photo-1550745165-9bc0b252726f?auto=format&fit=crop&w=1200&q=80')` }}
               />
               <div className="absolute bottom-0 left-0 p-8 z-10">
-                <span className="text-xs font-mono text-[#e5101a] uppercase font-bold tracking-widest block mb-1">Motion Graphics</span>
+                <span className="text-xs font-heading text-red-400 uppercase font-bold tracking-widest block mb-1">Motion Graphics</span>
                 <h3 className="font-heading font-semibold text-xl text-white">Fluidity</h3>
               </div>
             </div>
@@ -375,7 +371,7 @@ export const HomePage: React.FC<HomePageProps> = ({ onNavigate, onOpenReel }) =>
                 style={{ backgroundImage: `url('https://images.unsplash.com/photo-1509198397868-475647b2a1e5?auto=format&fit=crop&w=1200&q=80')` }}
               />
               <div className="absolute bottom-0 left-0 p-10 z-10">
-                <span className="text-xs font-mono text-[#e5101a] uppercase font-bold tracking-widest block mb-2">Streaming Series</span>
+                <span className="text-xs font-heading text-red-400 uppercase font-bold tracking-widest block mb-2">Streaming Series</span>
                 <h3 className="font-heading font-semibold text-2xl sm:text-3xl text-white">Beyond the Void</h3>
               </div>
             </div>
@@ -391,7 +387,7 @@ export const HomePage: React.FC<HomePageProps> = ({ onNavigate, onOpenReel }) =>
               <div className="font-heading font-extrabold text-4xl sm:text-6xl text-[#e5101a] mb-2 animate-pulse">
                 500+
               </div>
-              <p className="text-xs font-mono text-[#e8bcb7] uppercase tracking-wider font-semibold">
+              <p className="text-xs font-heading text-gray-400 uppercase tracking-wider font-semibold">
                 Shots Delivered
               </p>
             </div>
@@ -400,7 +396,7 @@ export const HomePage: React.FC<HomePageProps> = ({ onNavigate, onOpenReel }) =>
               <div className="font-heading font-extrabold text-4xl sm:text-6xl text-[#e5101a] mb-2 animate-pulse">
                 12
               </div>
-              <p className="text-xs font-mono text-[#e8bcb7] uppercase tracking-wider font-semibold">
+              <p className="text-xs font-heading text-gray-400 uppercase tracking-wider font-semibold">
                 Global Awards
               </p>
             </div>
@@ -409,7 +405,7 @@ export const HomePage: React.FC<HomePageProps> = ({ onNavigate, onOpenReel }) =>
               <div className="font-heading font-extrabold text-4xl sm:text-6xl text-[#e5101a] mb-2 animate-pulse">
                 85
               </div>
-              <p className="text-xs font-mono text-[#e8bcb7] uppercase tracking-wider font-semibold">
+              <p className="text-xs font-heading text-gray-400 uppercase tracking-wider font-semibold">
                 Artists Worldwide
               </p>
             </div>
@@ -418,7 +414,7 @@ export const HomePage: React.FC<HomePageProps> = ({ onNavigate, onOpenReel }) =>
               <div className="font-heading font-extrabold text-4xl sm:text-6xl text-[#e5101a] mb-2 animate-pulse">
                 24/7
               </div>
-              <p className="text-xs font-mono text-[#e8bcb7] uppercase tracking-wider font-semibold">
+              <p className="text-xs font-heading text-gray-400 uppercase tracking-wider font-semibold">
                 Pipeline Support
               </p>
             </div>
@@ -430,7 +426,7 @@ export const HomePage: React.FC<HomePageProps> = ({ onNavigate, onOpenReel }) =>
       <section className="py-24 bg-[#0c1321] px-6 md:px-16">
         <div className="max-w-7xl mx-auto">
           <div className="mb-20">
-            <span className="text-xs font-mono text-[#e5101a] tracking-[0.2em] uppercase block mb-4 font-semibold">
+            <span className="text-xs font-heading text-[#e5101a] tracking-widest uppercase block mb-4 font-semibold">
               Our Process
             </span>
             <h2 className="font-heading font-semibold text-3xl sm:text-5xl text-white">
@@ -527,7 +523,7 @@ export const HomePage: React.FC<HomePageProps> = ({ onNavigate, onOpenReel }) =>
                     </div>
                     <div>
                       <p className="font-heading font-semibold text-[#dce2f6] text-base">Soumadip Dinda (Vijay Souma)</p>
-                      <p className="text-xs font-mono text-[#e8bcb7]">CEO & Founder, Right Time FX Studio</p>
+                      <p className="text-xs font-heading text-red-400 font-medium">CEO & Founder, Right Time FX Studio</p>
                     </div>
                   </div>
                 </div>
@@ -548,7 +544,7 @@ export const HomePage: React.FC<HomePageProps> = ({ onNavigate, onOpenReel }) =>
                     <Star key={i} className="w-4 h-4 fill-current" />
                   ))}
                 </div>
-                <p className="text-xs font-mono font-bold text-[#dce2f6]">Leading VFX Studio Founder</p>
+                <p className="text-xs font-heading font-semibold text-gray-200">Leading VFX Studio Founder</p>
               </div>
             </div>
           </div>
@@ -564,7 +560,7 @@ export const HomePage: React.FC<HomePageProps> = ({ onNavigate, onOpenReel }) =>
             </h2>
             <button 
               onClick={() => onNavigate('blog')}
-              className="text-xs font-mono text-[#e8bcb7] hover:text-[#e5101a] transition-colors uppercase tracking-widest font-bold"
+              className="text-xs font-heading text-red-400 hover:text-red-300 transition-colors uppercase tracking-widest font-bold"
             >
               Read All Articles
             </button>
@@ -584,8 +580,8 @@ export const HomePage: React.FC<HomePageProps> = ({ onNavigate, onOpenReel }) =>
               </div>
               <div className="p-8">
                 <div className="flex gap-4 mb-4">
-                  <span className="text-xs font-mono bg-[#e5101a]/10 text-[#e5101a] px-3 py-1 rounded border border-[#e5101a]/30">Technology</span>
-                  <span className="text-xs font-mono text-[#e8bcb7]">May 12, 2024</span>
+                  <span className="text-xs font-heading bg-white/5 text-red-400 px-3 py-1 rounded border border-white/10 font-semibold">Technology</span>
+                  <span className="text-xs font-heading text-gray-400">May 12, 2024</span>
                 </div>
                 <h3 className="font-heading font-semibold text-xl sm:text-2xl text-white mb-4 group-hover:text-[#e5101a] transition-colors">
                   Scaling for the Unreal: Our New 20,000-Core Render Farm.
@@ -609,7 +605,7 @@ export const HomePage: React.FC<HomePageProps> = ({ onNavigate, onOpenReel }) =>
               </div>
               <div className="p-8 flex-grow">
                 <div className="flex gap-4 mb-4">
-                  <span className="text-xs font-mono bg-white/5 text-[#e8bcb7] px-3 py-1 rounded">Workflow</span>
+                  <span className="text-xs font-heading bg-white/5 text-gray-300 px-3 py-1 rounded font-semibold">Workflow</span>
                 </div>
                 <h3 className="font-heading font-semibold text-lg text-white mb-4 group-hover:text-[#e5101a] transition-colors">
                   The Art of the Light: Perfecting Subsurface Scattering.
