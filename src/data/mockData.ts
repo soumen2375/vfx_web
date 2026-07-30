@@ -2,6 +2,8 @@ import { ServiceItem, PortfolioItem, CaseStudy, TeamMember, BlogPost, FAQItem, S
 import founderImg from '../../assets/images/FOUNDER_headshot.jpeg';
 import hrImg from '../../assets/images/HR_headshot.png';
 import teamLeaderImg from '../../assets/images/TEAMLEADER_headshot.png';
+import beforeImg1 from '../../assets/images/Before_After_1.PNG';
+import afterImg1 from '../../assets/images/Before_After_2.PNG';
 
 export const STUDIO_INFO = {
   name: 'Right Time FX Studio',
@@ -364,9 +366,9 @@ export const PORTFOLIO_DATA: PortfolioItem[] = [
     category: 'Feature Film',
     year: '2025',
     description: 'A sci-fi blockbuster featuring over 420 visual effects shots, futuristic cyber-cities, volumetric portal FX, and photorealistic digital double actors.',
-    coverImage: 'https://images.unsplash.com/photo-1518709268805-4e9042af9f23?auto=format&fit=crop&w=1200&q=80',
-    beforeImage: 'https://images.unsplash.com/photo-1535016120720-40c646be5580?auto=format&fit=crop&w=1200&q=80', // Green screen studio plate
-    afterImage: 'https://images.unsplash.com/photo-1518709268805-4e9042af9f23?auto=format&fit=crop&w=1200&q=80', // Completed VFX composite
+    coverImage: afterImg1,
+    beforeImage: beforeImg1, // Raw building plate
+    afterImage: afterImg1, // Final fire & VFX composite plate
     videoUrl: 'https://www.w3schools.com/html/mov_bbb.mp4',
     breakdownNotes: 'Created 2.5D matte paintings, procedural smoke and energy destruction in Houdini, and deep compositing in Nuke with full ACEScg pipeline compliance.',
     softwareUsed: ['Foundry Nuke', 'SideFX Houdini', 'Maya', '3DEqualizer', 'Substance Painter'],

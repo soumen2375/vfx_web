@@ -15,6 +15,8 @@ import {
 } from 'lucide-react';
 import { PageId } from '../types';
 import founderImg from '../../assets/images/FOUNDER_headshot.jpeg';
+import beforeImg from '../../assets/images/Before_After_1.PNG';
+import afterImg from '../../assets/images/Before_After_2.PNG';
 
 interface HomePageProps {
   onNavigate: (page: PageId, id?: string) => void;
@@ -263,7 +265,7 @@ export const HomePage: React.FC<HomePageProps> = ({ onNavigate, onOpenReel }) =>
             <div 
               className="absolute inset-0 bg-cover bg-center"
               style={{ 
-                backgroundImage: `url('https://images.unsplash.com/photo-1536440136628-849c177e76a1?auto=format&fit=crop&w=1600&q=80')` 
+                backgroundImage: `url(${afterImg})` 
               }}
             />
 
@@ -271,7 +273,7 @@ export const HomePage: React.FC<HomePageProps> = ({ onNavigate, onOpenReel }) =>
             <div 
               className="absolute inset-0 bg-cover bg-center transition-none"
               style={{ 
-                backgroundImage: `url('https://images.unsplash.com/photo-1518709268805-4e9042af9f23?auto=format&fit=crop&w=1600&q=80')`,
+                backgroundImage: `url(${beforeImg})`,
                 clipPath: `inset(0 ${100 - sliderPos}% 0 0)`
               }}
             />

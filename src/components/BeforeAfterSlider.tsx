@@ -79,38 +79,34 @@ export const BeforeAfterSlider: React.FC<BeforeAfterSliderProps> = ({
       <img
         src={afterImage}
         alt="VFX Final"
-        className="w-full h-full object-cover pointer-events-none"
+        className="w-full h-full object-cover pointer-events-none select-none"
       />
 
       {/* After Label */}
-      <div className="absolute top-4 right-4 bg-black/70 backdrop-blur-md px-3 py-1 rounded text-xs font-heading tracking-wider text-cyan-400 border border-cyan-500/30">
+      <div className="absolute top-4 right-4 bg-black/70 backdrop-blur-md px-3 py-1 rounded text-xs font-heading tracking-wider text-[#e5101a] border border-[#e5101a]/30 z-10 pointer-events-none font-semibold">
         {afterLabel}
       </div>
 
       {/* Before Image (Clipped container) */}
-      <div
-        className="absolute top-0 bottom-0 left-0 overflow-hidden pointer-events-none"
-        style={{ width: `${sliderPosition}%` }}
-      >
-        <img
-          src={beforeImage}
-          alt="Raw Plate"
-          className="absolute top-0 left-0 w-full h-full object-cover max-w-none"
-          style={{ width: containerRef.current ? `${containerRef.current.offsetWidth}px` : '100%' }}
-        />
-        {/* Before Label */}
-        <div className="absolute top-4 left-4 bg-black/70 backdrop-blur-md px-3 py-1 rounded text-xs font-heading tracking-wider text-amber-400 border border-amber-500/30">
-          {beforeLabel}
-        </div>
+      <img
+        src={beforeImage}
+        alt="Raw Plate"
+        className="absolute inset-0 w-full h-full object-cover pointer-events-none select-none"
+        style={{ clipPath: `inset(0 ${100 - sliderPosition}% 0 0)` }}
+      />
+
+      {/* Before Label */}
+      <div className="absolute top-4 left-4 bg-black/70 backdrop-blur-md px-3 py-1 rounded text-xs font-heading tracking-wider text-amber-400 border border-amber-500/30 z-10 pointer-events-none font-semibold">
+        {beforeLabel}
       </div>
 
       {/* Slider Divider Line */}
       <div
-        className="absolute top-0 bottom-0 w-1 bg-gradient-to-b from-blue-500 via-cyan-400 to-purple-600 cursor-ew-resize z-20 shadow-[0_0_15px_rgba(6,182,212,0.8)]"
+        className="absolute top-0 bottom-0 w-1 bg-[#e5101a] cursor-ew-resize z-20 shadow-[0_0_15px_rgba(229,16,26,0.8)]"
         style={{ left: `${sliderPosition}%` }}
       >
         {/* Handle Button */}
-        <div className="absolute top-1/2 -translate-y-1/2 -translate-x-1/2 w-10 h-10 rounded-full bg-blue-600 text-white border-2 border-cyan-300 flex items-center justify-center shadow-lg shadow-cyan-500/50 hover:scale-110 transition-transform">
+        <div className="absolute top-1/2 -translate-y-1/2 -translate-x-1/2 w-10 h-10 rounded-full bg-[#e5101a] text-white border-2 border-white flex items-center justify-center shadow-lg hover:scale-110 transition-transform">
           <MoveHorizontal className="w-5 h-5" />
         </div>
       </div>
