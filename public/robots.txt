@@ -1,0 +1,31 @@
+# robots.txt for Right Time FX Studio / RIK NOVA TECHNOLOGY
+# https://www.righttimefx.com
+
+User-agent: *
+Allow: /
+Disallow: /admin/
+Disallow: /api/
+Disallow: /*?*query=
+
+# AI Crawlers & LLM Bots (GEO Optimization)
+User-agent: GPTBot
+Allow: /
+
+User-agent: ChatGPT-User
+Allow: /
+
+User-agent: ClaudeBot
+Allow: /
+
+User-agent: PerplexityBot
+Allow: /
+
+User-agent: Google-Extended
+Allow: /
+
+User-agent: Applebot-Extended
+Allow: /
+
+# Sitemap Index Reference
+Sitemap: https://www.righttimefx.com/sitemap-index.xml
+Sitemap: https://www.righttimefx.com/sitemap.xml

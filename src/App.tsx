@@ -7,6 +7,7 @@ import { SearchModal } from './components/SearchModal';
 import { ShowreelModal } from './components/ShowreelModal';
 import { LiveChatWidget } from './components/LiveChatWidget';
 import { FloatingActions } from './components/FloatingActions';
+import { SEOHead } from './components/SEOHead';
 
 import { HomePage } from './pages/HomePage';
 import { AboutPage } from './pages/AboutPage';
@@ -49,6 +50,9 @@ export default function App() {
 
   return (
     <div className="min-h-screen bg-[#0B1220] text-[#E5E7EB] font-body flex flex-col selection:bg-cyan-500 selection:text-black">
+      {/* SEO & Meta Head Manager */}
+      <SEOHead currentPage={currentPage} detailId={detailId} />
+
       {/* Navbar */}
       <Navbar
         currentPage={currentPage}

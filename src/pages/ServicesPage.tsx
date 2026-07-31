@@ -149,15 +149,51 @@ export const ServicesPage: React.FC<ServicesPageProps> = ({ initialServiceId, on
                 </div>
               </div>
 
-              {/* Overview */}
-              <div>
-                <h4 className="font-heading font-bold text-white text-lg mb-2">Service Overview</h4>
+              {/* GEO Quick Answer Box (AI Engine Readability Snippet) */}
+              <div className="p-4 rounded-xl bg-gradient-to-r from-red-950/40 via-red-900/20 to-black/60 border border-red-500/40 space-y-2">
+                <div className="flex items-center space-x-2 text-xs font-mono font-bold text-red-400 uppercase tracking-wider">
+                  <Sparkles className="w-4 h-4 text-red-400 shrink-0" />
+                  <span>GEO Quick Answer & AI Definition</span>
+                </div>
+                <p className="text-xs sm:text-sm text-gray-200 font-medium leading-relaxed">
+                  <strong className="text-white">{selectedService.title}</strong> is a specialized visual effects post-production service provided by Right Time FX Studio. {selectedService.shortDesc} It enables film, episodic, and commercial producers to achieve photorealistic visual quality on schedule and within budget.
+                </p>
+              </div>
+
+              {/* What is this Service? */}
+              <div className="space-y-2">
+                <h3 className="font-heading font-bold text-white text-lg flex items-center gap-2">
+                  <span className="w-2 h-2 rounded-full bg-red-500"></span>
+                  <span>What is {selectedService.title}?</span>
+                </h3>
                 <p className="text-gray-300 text-xs sm:text-sm leading-relaxed">{selectedService.fullDesc}</p>
+              </div>
+
+              {/* How Does It Work & Who Needs It? */}
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                <div className="p-4 rounded-xl bg-[#0B0E17] border border-white/10 space-y-2">
+                  <h4 className="font-heading font-bold text-white text-sm text-red-400">How Does It Work?</h4>
+                  <p className="text-xs text-gray-300 leading-relaxed">
+                    Our team ingests your raw plate footage into an ACEScg color-managed pipeline, performs accurate 2D/3D tracking, executes precise artist roto or paint cleanup, and integrates multi-pass CG assets before delivering studio-ready DPX/EXR sequences.
+                  </p>
+                </div>
+                <div className="p-4 rounded-xl bg-[#0B0E17] border border-white/10 space-y-2">
+                  <h4 className="font-heading font-bold text-white text-sm text-red-400">Who Needs This Service?</h4>
+                  <ul className="text-xs text-gray-300 space-y-1.5 list-disc list-inside">
+                    <li>Feature Film & Episodic TV Post-Production Supervisors</li>
+                    <li>VFX Producers & Directors looking for dependable outsourcing</li>
+                    <li>Commercial Agencies requiring high-end product & asset cleanup</li>
+                    <li>Indie Filmmakers needing Hollywood-quality visual effects</li>
+                  </ul>
+                </div>
               </div>
 
               {/* Benefits */}
               <div>
-                <h4 className="font-heading font-bold text-white text-lg mb-3">Key Benefits</h4>
+                <h3 className="font-heading font-bold text-white text-lg mb-3 flex items-center gap-2">
+                  <span className="w-2 h-2 rounded-full bg-red-500"></span>
+                  <span>Key Benefits & Advantages</span>
+                </h3>
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
                   {selectedService.benefits.map((b, i) => (
                     <div key={i} className="p-3 rounded-lg bg-white/5 border border-white/5 flex items-start space-x-2 text-xs text-gray-200">
@@ -170,7 +206,10 @@ export const ServicesPage: React.FC<ServicesPageProps> = ({ initialServiceId, on
 
               {/* Process */}
               <div>
-                <h4 className="font-heading font-bold text-white text-lg mb-3">Production Workflow</h4>
+                <h3 className="font-heading font-bold text-white text-lg mb-3 flex items-center gap-2">
+                  <span className="w-2 h-2 rounded-full bg-red-500"></span>
+                  <span>Studio Production Pipeline & Workflow</span>
+                </h3>
                 <div className="space-y-2">
                   {selectedService.process.map((p, i) => (
                     <div key={i} className="p-3 rounded-lg bg-[#0B0E17] border border-white/5 flex items-center space-x-3 text-xs text-gray-300">
@@ -183,9 +222,27 @@ export const ServicesPage: React.FC<ServicesPageProps> = ({ initialServiceId, on
                 </div>
               </div>
 
+              {/* Industries Served */}
+              <div>
+                <h3 className="font-heading font-bold text-white text-lg mb-3 flex items-center gap-2">
+                  <span className="w-2 h-2 rounded-full bg-red-500"></span>
+                  <span>Industries Served</span>
+                </h3>
+                <div className="grid grid-cols-2 sm:grid-cols-4 gap-2">
+                  {['Feature Films', 'Episodic Television', 'Commercial Advertising', 'Gaming & Trailers'].map((ind, i) => (
+                    <div key={i} className="p-2.5 rounded-lg bg-white/5 border border-white/5 text-center text-xs text-gray-300 font-medium">
+                      {ind}
+                    </div>
+                  ))}
+                </div>
+              </div>
+
               {/* Technologies Used */}
               <div>
-                <h4 className="font-heading font-bold text-white text-lg mb-3">Software & Tech Stack</h4>
+                <h3 className="font-heading font-bold text-white text-lg mb-3 flex items-center gap-2">
+                  <span className="w-2 h-2 rounded-full bg-red-500"></span>
+                  <span>Software & Toolchain</span>
+                </h3>
                 <div className="flex flex-wrap gap-2">
                   {selectedService.technologies.map((t, i) => (
                     <span key={i} className="px-3 py-1.5 rounded-lg bg-red-950/80 border border-red-500/40 text-xs text-red-300 font-mono font-bold">
@@ -198,7 +255,10 @@ export const ServicesPage: React.FC<ServicesPageProps> = ({ initialServiceId, on
               {/* FAQs */}
               {selectedService.faqs.length > 0 && (
                 <div>
-                  <h4 className="font-heading font-bold text-white text-lg mb-3">Service FAQs</h4>
+                  <h3 className="font-heading font-bold text-white text-lg mb-3 flex items-center gap-2">
+                    <span className="w-2 h-2 rounded-full bg-red-500"></span>
+                    <span>Frequently Asked Questions</span>
+                  </h3>
                   <div className="space-y-3">
                     {selectedService.faqs.map((faq, i) => (
                       <div key={i} className="p-4 rounded-xl bg-white/5 border border-white/5 space-y-1">
