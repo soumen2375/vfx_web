@@ -27,15 +27,15 @@ export const SEOHead: React.FC<SEOHeadProps> = ({ currentPage, detailId }) => {
 
     switch (currentPage) {
       case 'home':
-        title = 'Right Time FX Studio | Leading VFX Outsourcing Studio in India';
-        description = 'Top-rated VFX outsourcing partner for Hollywood, Bollywood & streaming studios. Expert Rotoscoping, Matchmove, Paint Cleanup, CGI, and Compositing with 99.9% on-time delivery.';
+        title = 'Right Time FX Studio | Premier VFX Outsourcing Studio India';
+        description = 'Right Time FX Studio is India\'s leading VFX outsourcing studio. Expert Rotoscoping, Matchmove, Paint Cleanup, CGI & Compositing for global films.';
         canonicalUrl = `${STUDIO_BASE_URL}/`;
         schemas.push(getBreadcrumbSchema([{ name: 'Home', url: `${STUDIO_BASE_URL}/` }]));
         break;
 
       case 'about':
-        title = 'About Us | Right Time FX Studio - Premiere Indian VFX Company';
-        description = 'Discover Right Time FX Studio, India’s top VFX outsourcing hub with 250+ artists delivering Hollywood-grade rotoscoping, camera tracking, and CGI for feature films.';
+        title = 'About Us | Right Time FX Studio - Premiere Indian VFX Studio';
+        description = 'Discover Right Time FX Studio, India’s top VFX outsourcing hub with 250+ artists delivering Hollywood-grade rotoscoping, camera tracking, and CGI.';
         canonicalUrl = `${STUDIO_BASE_URL}/about`;
         keywords = 'About Right Time FX, VFX Studio India, RIK NOVA TECHNOLOGY, VFX Team, Rotoscoping Artists';
         schemas.push(getBreadcrumbSchema([
@@ -66,7 +66,7 @@ export const SEOHead: React.FC<SEOHeadProps> = ({ currentPage, detailId }) => {
             { name: activeService.title, url: canonicalUrl }
           ]));
         } else {
-          title = 'VFX Services | Rotoscoping, Matchmove, Paint & CGI Studio';
+          title = 'VFX Outsourcing Services | Right Time FX Studio India';
           description = 'Comprehensive VFX production services including Rotoscoping, Camera Tracking, Digital Cleanup, 3D Animation, Hard-Surface CGI, and Nuke Compositing.';
           canonicalUrl = `${STUDIO_BASE_URL}/services`;
           schemas.push(getBreadcrumbSchema([
@@ -78,7 +78,7 @@ export const SEOHead: React.FC<SEOHeadProps> = ({ currentPage, detailId }) => {
       }
 
       case 'portfolio':
-        title = 'VFX Portfolio & Showreel | Right Time FX Studio';
+        title = 'VFX Portfolio & Showreel | Right Time FX Studio India';
         description = 'Explore before-and-after VFX breakdowns across feature films, sci-fi series, commercial ads, and creature animation executed by Right Time FX Studio.';
         canonicalUrl = `${STUDIO_BASE_URL}/portfolio`;
         schemas.push(getBreadcrumbSchema([
@@ -95,7 +95,7 @@ export const SEOHead: React.FC<SEOHeadProps> = ({ currentPage, detailId }) => {
           canonicalUrl = `${STUDIO_BASE_URL}/case-studies/${activeCase.id}`;
           ogImage = activeCase.heroImage;
         } else {
-          title = 'VFX Production Case Studies | Right Time FX Studio';
+          title = 'VFX Production Case Studies | Right Time FX Studio India';
           description = 'In-depth case studies showcasing how our studio solved complex rotoscoping, creature FX, and 3D camera tracking challenges for global film clients.';
           canonicalUrl = `${STUDIO_BASE_URL}/case-studies`;
         }
@@ -109,7 +109,7 @@ export const SEOHead: React.FC<SEOHeadProps> = ({ currentPage, detailId }) => {
       case 'blog': {
         const activeBlog = detailId ? BLOG_POSTS.find(b => b.id === detailId) : undefined;
         if (activeBlog) {
-          title = `${activeBlog.title} | Right Time FX VFX Insights`;
+          title = `${activeBlog.title} | Right Time FX Studio`;
           description = activeBlog.excerpt;
           canonicalUrl = `${STUDIO_BASE_URL}/blog/${activeBlog.id}`;
           ogImage = activeBlog.image;
@@ -127,7 +127,7 @@ export const SEOHead: React.FC<SEOHeadProps> = ({ currentPage, detailId }) => {
             { name: activeBlog.title, url: canonicalUrl }
           ]));
         } else {
-          title = 'VFX Blog & Industry Technical Guides | Right Time FX';
+          title = 'VFX Blog & Technical Insights | Right Time FX Studio India';
           description = 'Expert visual effects tutorials, Rotoscoping deep-dives, Nuke compositing tips, matchmove workflows, and CGI trends from industry veterans.';
           canonicalUrl = `${STUDIO_BASE_URL}/blog`;
           schemas.push(getBreadcrumbSchema([
@@ -183,8 +183,8 @@ export const SEOHead: React.FC<SEOHeadProps> = ({ currentPage, detailId }) => {
         break;
 
       default:
-        title = 'Right Time FX Studio | Leading VFX Outsourcing Studio in India';
-        description = 'Premier Visual Effects, CGI, 3D Animation, Virtual Production and Post-Production studio.';
+        title = 'Right Time FX Studio | Premier VFX Outsourcing Studio India';
+        description = 'Right Time FX Studio is India\'s leading VFX outsourcing studio. Expert Rotoscoping, Matchmove, Paint Cleanup, CGI & Compositing for global films.';
         canonicalUrl = `${STUDIO_BASE_URL}/`;
     }
 
@@ -205,6 +205,7 @@ export const SEOHead: React.FC<SEOHeadProps> = ({ currentPage, detailId }) => {
     // Standard Meta Tags
     setMetaTag('meta[name="description"]', 'name', 'description', description);
     setMetaTag('meta[name="keywords"]', 'name', 'keywords', keywords);
+    setMetaTag('meta[name="robots"]', 'name', 'robots', 'index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1');
 
     // Open Graph Tags
     setMetaTag('meta[property="og:title"]', 'property', 'og:title', title);
@@ -212,9 +213,12 @@ export const SEOHead: React.FC<SEOHeadProps> = ({ currentPage, detailId }) => {
     setMetaTag('meta[property="og:url"]', 'property', 'og:url', canonicalUrl);
     setMetaTag('meta[property="og:image"]', 'property', 'og:image', ogImage);
     setMetaTag('meta[property="og:type"]', 'property', 'og:type', 'website');
+    setMetaTag('meta[property="og:site_name"]', 'property', 'og:site_name', 'Right Time FX Studio');
+    setMetaTag('meta[property="og:locale"]', 'property', 'og:locale', 'en_US');
 
     // Twitter Card Tags
     setMetaTag('meta[name="twitter:card"]', 'name', 'twitter:card', 'summary_large_image');
+    setMetaTag('meta[name="twitter:site"]', 'name', 'twitter:site', '@righttimefx');
     setMetaTag('meta[name="twitter:title"]', 'name', 'twitter:title', title);
     setMetaTag('meta[name="twitter:description"]', 'name', 'twitter:description', description);
     setMetaTag('meta[name="twitter:image"]', 'name', 'twitter:image', ogImage);

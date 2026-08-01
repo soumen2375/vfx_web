@@ -144,7 +144,7 @@ export const BlogPage: React.FC<BlogPageProps> = ({ initialArticleId, onNavigate
                 <span className="text-xs font-mono text-red-400 font-bold uppercase bg-red-950 px-3 py-1 rounded border border-red-500/30">
                   {selectedPost.category}
                 </span>
-                <h1 className="text-2xl sm:text-3xl font-heading font-extrabold text-white mt-3">{selectedPost.title}</h1>
+                <h2 className="text-2xl sm:text-3xl font-heading font-extrabold text-white mt-3">{selectedPost.title}</h2>
                 <div className="flex items-center space-x-4 text-xs text-gray-400 font-mono mt-2">
                   <span>By {selectedPost.author.name} ({selectedPost.author.role})</span>
                   <span>•</span>

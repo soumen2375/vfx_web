@@ -78,7 +78,7 @@ export const BeforeAfterSlider: React.FC<BeforeAfterSliderProps> = ({
       {/* After Image (Full background) */}
       <img
         src={afterImage}
-        alt="VFX Final"
+        alt={`${afterLabel} - Right Time FX Final Compositing & VFX Pass`}
         className="w-full h-full object-cover pointer-events-none select-none"
       />
 
@@ -90,7 +90,7 @@ export const BeforeAfterSlider: React.FC<BeforeAfterSliderProps> = ({
       {/* Before Image (Clipped container) */}
       <img
         src={beforeImage}
-        alt="Raw Plate"
+        alt={`${beforeLabel} - Raw Live Action Plate Before VFX`}
         className="absolute inset-0 w-full h-full object-cover pointer-events-none select-none"
         style={{ clipPath: `inset(0 ${100 - sliderPosition}% 0 0)` }}
       />

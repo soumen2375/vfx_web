@@ -576,7 +576,7 @@ export const HomePage: React.FC<HomePageProps> = ({ onNavigate, onOpenReel }) =>
               <div className="aspect-video bg-cover bg-center overflow-hidden">
                 <img 
                   src="https://images.unsplash.com/photo-1620712943543-bcc4688e7485?auto=format&fit=crop&w=1200&q=80" 
-                  alt="Render Farm" 
+                  alt="Right Time FX 20,000-Core High-Speed Render Farm" 
                   className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
                 />
               </div>
@@ -601,7 +601,7 @@ export const HomePage: React.FC<HomePageProps> = ({ onNavigate, onOpenReel }) =>
               <div className="h-48 overflow-hidden">
                 <img 
                   src="https://images.unsplash.com/photo-1598899134739-24c46f58b8c0?auto=format&fit=crop&w=800&q=80" 
-                  alt="Subsurface Scattering" 
+                  alt="Subsurface Scattering Lighting & CGI Render Pass" 
                   className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
                 />
               </div>
